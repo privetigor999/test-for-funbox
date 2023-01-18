@@ -1,0 +1,203 @@
+.productWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 509px;
+  color: #ffffff;
+  margin: 0 40px 20px;
+
+  .productCard,
+  .productPickedCard,
+  .productDisabledCard {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: 8px;
+    clip-path: polygon(45px 0, 100% 0%, 100% 100%, 0 100%, 0 45px);
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: 78px;
+      height: 4px;
+      box-sizing: border-box;
+      position: absolute;
+      left: -25px;
+      top: 24px;
+      background: transparent;
+      transform: rotate(315deg);
+    }
+    .infoBlock {
+      margin: 20px 50px 0;
+      .headTitle,
+      .disabledHeadTitle {
+        font-family: "Trebuchet MS";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      .headTitle {
+        color: #666666;
+      }
+      .disabledHeadTitle {
+        color: #b3b3b3;
+      }
+      .title,
+      .disabledTitle {
+        font-family: "Trebuchet MS";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        margin-top: 10px;
+      }
+      .title {
+        color: #000000;
+      }
+      .disabledTitle {
+        color: #b3b3b3;
+      }
+      .taste,
+      .disabledTaste {
+        font-family: "Trebuchet MS";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 4px;
+      }
+      .taste {
+        color: #000000;
+      }
+      .disabledTaste {
+        color: #b3b3b3;
+      }
+      .descriptionBlock,
+      .disabledDescriptionBlock {
+        font-family: "Trebuchet MS";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+
+        margin-top: 10px;
+        div {
+          line-height: 15px;
+        }
+      }
+      .descriptionBlock {
+        color: #666666;
+      }
+      .disabledDescriptionBlock {
+        color: #b3b3b3;
+      }
+    }
+    .imgCat,
+    .disabledImgCat {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .disabledImgCat {
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(5px 5px 5px #222) grayscale(80%);
+    }
+    .weightBlock,
+    .weightPickedBlock,
+    .weightDisabledBlock {
+      position: absolute;
+      bottom: 4%;
+      right: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 80px;
+      height: 80px;
+      z-index: 1;
+      border-radius: 50%;
+      color: #ffffff;
+      .weightCount {
+        font-family: "Trebuchet MS";
+        font-size: 35px;
+      }
+      .kg {
+        font-family: "Trebuchet MS";
+        font-size: 20px;
+        line-height: 16px;
+      }
+    }
+    .weightBlock {
+      background-color: #1698d9;
+    }
+    .weightPickedBlock {
+      background-color: #d91667;
+    }
+    .weightDisabledBlock {
+      background-color: #b3b3b3;
+    }
+  }
+  .productCard {
+    border: 4px solid #1698d9;
+    &::before {
+      border: 2px solid #1698d9;
+    }
+  }
+  .productPickedCard {
+    border: 4px solid #d91667;
+    &::before {
+      border: 2px solid #d91667;
+    }
+  }
+  .productDisabledCard {
+    border: 4px solid #b3b3b3;
+    &::before {
+      border: 2px solid #b3b3b3;
+    }
+    cursor: no-drop;
+  }
+
+  .footerBlock {
+    color: #ffffff;
+    font-size: 13px;
+    margin-top: 8px;
+    span {
+      color: #1698d9;
+      text-decoration: underline dashed 1px;
+      text-underline-offset: 4px;
+      cursor: pointer;
+    }
+  }
+  .disabledFooterBlock {
+    color: #ffff66;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  &:hover {
+    .productCard {
+      border: 4px solid #2ea8e6;
+      &::before {
+        border: 2px solid #2ea8e6;
+      }
+      .weightBlock {
+        background-color: #2ea8e6;
+      }
+    }
+    .productPickedCard {
+      border: 4px solid #e52e7a;
+      &::before {
+        border: 2px solid #e52e7a;
+      }
+      .weightPickedBlock {
+        background-color: #e52e7a;
+      }
+    }
+    .footerBlock {
+      span {
+        color: #22a7e9;
+      }
+    }
+  }
+}
